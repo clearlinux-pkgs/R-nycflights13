@@ -4,13 +4,12 @@
 #
 Name     : R-nycflights13
 Version  : 1.0.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/nycflights13_1.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/nycflights13_1.0.0.tar.gz
 Summary  : Flights that Departed NYC in 2013
 Group    : Development/Tools
 License  : CC0-1.0
-Requires: R-tibble
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 
@@ -27,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552836924
+export SOURCE_DATE_EPOCH=1552881246
 
 %install
-export SOURCE_DATE_EPOCH=1552836924
+export SOURCE_DATE_EPOCH=1552881246
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
