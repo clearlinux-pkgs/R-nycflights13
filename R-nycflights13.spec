@@ -4,7 +4,7 @@
 #
 Name     : R-nycflights13
 Version  : 1.0.1
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/nycflights13_1.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/nycflights13_1.0.1.tar.gz
 Summary  : Flights that Departed NYC in 2013
