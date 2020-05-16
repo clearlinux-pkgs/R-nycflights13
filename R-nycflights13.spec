@@ -4,7 +4,7 @@
 #
 Name     : R-nycflights13
 Version  : 1.0.1
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/nycflights13_1.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/nycflights13_1.0.1.tar.gz
 Summary  : Flights that Departed NYC in 2013
@@ -13,30 +13,29 @@ License  : CC0-1.0
 Requires: R-tibble
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-# nycflights13
-[![Travis-CI Build Status](https://travis-ci.org/hadley/nycflights13.svg?branch=master)](https://travis-ci.org/hadley/nycflights13)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/nycflights13)](https://cran.r-project.org/package=nycflights13)
+in 2013.  Also includes useful 'metadata' on airlines, airports,
+    weather, and planes.
 
 %prep
 %setup -q -c -n nycflights13
+cd %{_builddir}/nycflights13
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571869799
+export SOURCE_DATE_EPOCH=1589587605
 
 %install
-export SOURCE_DATE_EPOCH=1571869799
+export SOURCE_DATE_EPOCH=1589587605
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
